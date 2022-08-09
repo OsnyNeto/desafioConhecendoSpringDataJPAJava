@@ -4,6 +4,7 @@ import me.dio.academia.digital.entity.Aluno;
 import me.dio.academia.digital.entity.AvaliacaoFisica;
 import me.dio.academia.digital.entity.form.AlunoForm;
 import me.dio.academia.digital.entity.form.AlunoUpdateForm;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -41,9 +42,11 @@ public interface IAlunoService {
 
   /**
    * Deleta um Aluno específico.
+   *
    * @param id - id do Aluno que será removido.
+   * @return
    */
-  void delete(Long id);
+  Aluno delete(Long id);
 
     List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id);
 }
